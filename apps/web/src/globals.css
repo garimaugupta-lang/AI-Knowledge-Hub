@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* PwC Brand Palette */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --primary: 22 100% 50%;         /* PwC Orange #FF6600 (Tangerine) */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 100% 97%;       /* Light warm tint */
+    --secondary-foreground: 0 0% 15%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 22 90% 95%;           /* Light orange tint */
+    --accent-foreground: 22 100% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 22 100% 50%;            /* PwC Orange for focus rings */
+    --radius: 0.5rem;
+
+    /* PwC extended palette for direct use */
+    --pwc-orange: 22 100% 50%;       /* #FF6600 */
+    --pwc-dark: 0 0% 17%;            /* #2D2D2D */
+    --pwc-rose: 345 80% 55%;         /* #E0301E — PwC Red/Rose */
+    --pwc-gold: 40 95% 55%;          /* #D4A843 — Warm gold */
+    --pwc-tan: 30 30% 95%;           /* Light background warmth */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.font-heading {
+  font-family: Georgia, "Times New Roman", serif;
+}
